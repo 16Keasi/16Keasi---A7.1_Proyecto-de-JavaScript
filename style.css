@@ -1,0 +1,78 @@
+/* Estructura general */
+body {
+    font-family: sans-serif;
+    background: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Encabezado */
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  /* Contenedor principal */
+  .panel {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  /* Caja de configuración */
+  .config {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: space-between;
+  }
+
+  /* Etiquetas dentro de config */
+  .config label {
+    flex: 1 1 30%;
+  }
+  button {
+    padding: 8px 16px;
+    margin-top: 10px;
+  }
+
+  /* Marcador de puntuaciones */
+  .scoreboard {
+    margin: 20px 0 10px;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 18px;
+  }
+
+  /* Turno actual */
+  #turno {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  /* Tablero: cuadrícula dinámica */
+  .grid {
+    display: grid;
+    justify-content: center;
+    gap: 2px;
+  }
+  .cell {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+
+  /* Colores según jugador */
+  .cell.azul {
+    background-color: blue;
+  }
+  .cell.rojo {
+    background-color: red;
+  }
+  

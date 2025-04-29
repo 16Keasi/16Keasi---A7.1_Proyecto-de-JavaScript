@@ -1,0 +1,76 @@
+<!-- Encabezado del documento -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Battle v2</title>
+  <link rel="stylesheet" href="style.css"> <!-- Enlace a los estilos -->
+</head>
+<body>
+
+
+  <h1>Color Battle</h1>
+
+    <!-- Panel de juego: configuración y tablero -->
+  <div class="panel">
+
+    <!-- Opciones seleccionables: número de jugadores, nombres, fx, música, etc. -->
+    <div class="config">
+      <label>🧑‍🤝‍🧑 Nº Usuarios:
+        <select id="numPlayers">
+          <option value="1">1</option>
+          <option value="2">2</option>
+        </select>
+      </label>
+      <label>Usuario 1: <input id="user1" placeholder="Jugador 1" /></label>
+      <label>Usuario 2: <input id="user2" placeholder="Jugador 2 / IA" /></label>
+
+      <label><input type="checkbox" id="fxSound" checked /> FxSound</label>
+      <label><input type="checkbox" id="music" checked /> Music</label>
+
+      <label>Modo Juego:
+        <select id="modoJuego">
+          <option value="normal">🟦⬛⬛⬛⬛</option>
+          <option value="plus">🟦🟥⬛⬛⬛</option>
+        </select>
+      </label>
+
+      <label>Guardar Partida:
+        <select id="guardarPartida">
+          <option value="on">ON</option>
+          <option value="off">OFF</option>
+        </select>
+      </label>
+
+      <label>Tiempo Turno:
+        <input type="number" id="tiempoTurno" value="30" /> seg
+      </label>
+
+      <label>Tamaño Tablero:
+        <select id="tamanoTablero">
+          <option value="6">6x6</option>
+          <option value="8" selected>8x8</option>
+          <option value="10">10x10</option>
+        </select>
+      </label>
+
+      <!-- Botones principales -->
+      <button onclick="iniciarJuego()">Iniciar</button>
+      <button onclick="reiniciarJuego()">Reiniciar</button>
+    </div>
+
+    <!-- Marcador -->
+    <div class="scoreboard">
+      <div id="user1Name">Jugador 1 (Azul): <span id="score1">0</span></div>
+      <div id="user2Name">Jugador 2 / IA (Rojo): <span id="score2">0</span></div>
+    </div>
+
+       <!-- Turno actual -->
+    <div id="turno">Turno: Jugador 1</div>
+    <div id="tablero" class="grid"></div>
+  </div>
+
+   <!-- Script con toda la lógica del juego -->
+  <script src="script.js"></script>
+</body>
+</html>
